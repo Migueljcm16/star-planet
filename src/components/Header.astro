@@ -28,7 +28,9 @@ import maquina from '../assets/fondo/maquina.png';
         <img src={maquina.src} alt="">
         <div>
             <span>
-                LA MEJOR CALIDAD EN MAQUINAS PELUCHERAS
+                LA MEJOR CALIDAD EN
+                <br>
+                MAQUINAS PELUCHERAS
             </span>
             <span>
                 Somos líderes en la venta de máquinas pelucheras de alta calidad,
@@ -172,6 +174,118 @@ import maquina from '../assets/fondo/maquina.png';
                 font-weight: 500;
                 text-decoration: none;
                 padding: 14px 26px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+
+        .n-links {
+            display: none;
+        }
+
+        .h-contenido {
+
+            & > img {
+                display: none;
+            }
+
+            & > div {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 30px;
+
+                & span:nth-child(1) {
+                    max-width: 600px;
+                    text-align: center;
+                }
+
+                & span:nth-child(2) {
+                    max-width: 600px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .n-logo {
+            & > img {
+                height: 45px;
+            }
+
+            & > div {
+
+                & span {
+
+                    &:nth-child(1) {
+                        font-size: 26px;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .h-contenido {
+            & > div {
+
+                & span:nth-child(1) {
+                    font-size: 42px;
+                }
+
+                & span:nth-child(2) {
+                    font-size: 15px;
+                }
+
+                & a {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .h-contenido {
+            & > div {
+
+                & span:nth-child(1) {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .n-logo {
+            & > img {
+                height: 42px;
+            }
+
+            & > div {
+
+                & span {
+
+                    &:nth-child(1) {
+                        font-size: 24px;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+
+        .h-contenido {
+            & > div {
+
+                & span:nth-child(1) {
+                    font-size: 26px;
+                }
             }
         }
     }

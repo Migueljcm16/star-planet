@@ -57,7 +57,44 @@ import fondo3 from '../assets/mision/fondo3.webp';
     }
 
     .m-img {
-        min-width: 360px;
+        min-width: 0px;
         object-fit: cover;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .m-desc {
+            & span {
+                font-size: 14px;
+            }
+
+            & span:nth-child(1) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 680px) {
+        .m {
+            & > div {
+                display: flex;
+                flex-direction: column;
+                padding: 0px;
+                gap: 0;
+            }
+        }
+
+        .m-desc {
+            max-width: none;
+            padding: 60px 30px;
+            gap: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .m-desc {
+            & span:nth-child(1) {
+                font-size: 28px;
+            }
+        }
     }
 </style>

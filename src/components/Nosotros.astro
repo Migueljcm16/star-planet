@@ -89,4 +89,47 @@ import video from '../assets/nosotros/video-nosotros.mp4';
             line-height: 26px;
         }
     }
+
+    @media only screen and (max-width: 900px) {
+        .n {
+            & > div {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .n-vid {
+            flex: none;
+            height: 400px;
+
+            & div {
+                display: none;
+            }
+        }
+
+        .n-desc {
+            width: auto;
+            padding: 0px;
+            gap: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .n-desc {
+            & span {
+                font-size: 14px;
+            }
+
+            & span:nth-child(1) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .n-desc {
+            & span:nth-child(1) {
+                font-size: 28px;
+            }
+        }
+    }
 </style>

@@ -110,4 +110,65 @@
     .c-datos-titulo {
         font-size: 16px !important;
     }
+
+   
+
+    @media only screen and (max-width: 950px) {
+        .c {
+            & > div {
+                flex-direction: column;
+                gap: 80px;
+            }
+        }
+
+        .c-formulario {
+            & form {
+
+                & input[type="text"], input[type="email"], textarea {
+                    min-width: 0;
+                    flex: 1;
+                }
+            }
+        }
+
+        .c-datos {
+            padding-top: 40px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .c-formulario {
+            & > span {
+                font-size: 30px;
+            }
+
+            & form {
+                & button {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .c-datos {
+            & span {
+                font-size: 14px;
+            }
+        }
+
+        .c-datos-titulo {
+            font-size: 15px !important;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .c-formulario {
+            & > span {
+                font-size: 28px;
+            }
+        }
+
+        .c-datos-titulo {
+            font-size: 14px !important;
+        }
+    }
 </style>
