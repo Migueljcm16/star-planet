@@ -1,0 +1,150 @@
+---
+
+---
+
+<footer>
+    <div>
+        <div class="f-sec1">
+            <div>
+                <span>STAR PLANET</span>
+                <span>A FUN WORLD </span>
+            </div>
+            <div>
+                Empresa peruana dedicada a la innovación en máquinas de
+                juego, combinando diseño exclusivo, calidad superior y alta
+                rentabilidad con una producción integral.
+            </div>
+        </div>
+        <div class="f-sec2">
+            <span>LINKS</span>
+            <div>
+                <a href="#">INICIO</a>
+                <a href="#">NOSOTROS</a>
+                <a href="#">OFRECEMOS</a>
+                <a href="#">MISION</a>
+                <a href="#">CONTACTO</a>
+            </div>
+        </div>
+        <div class="f-sec3">
+            <span>CONTACTO</span>
+            <div>
+                <span>
+                    ficinacomercial@startplanet.com.pe
+                </span>
+                <span>
+                    +51 993977804
+                </span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <span>
+            ©2025 Start Planet. Todos los derechos reservados.
+        </span>
+    </div>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0px 30px;
+        box-sizing: border-box;
+
+        & > div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e2e2e2;
+            border-radius: 20px;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        & > div:nth-child(2) {
+            text-align: center;
+            padding: 25px 0px;
+        }
+    }
+
+    .f-sec1 {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        gap: 20px;
+
+        & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: fit-content;
+
+            & span {
+                color: #000000;
+
+                &:nth-child(1) {
+                    font-size: 28px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    line-height: 24px;
+                }
+
+                &:nth-child(2) {
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        & > div:nth-child(2) {
+            line-height: 24px;
+        }
+    }
+
+    .f-sec2 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        & > span {
+            color: #000000;
+            font-size: 18px;
+            font-weight: bold;
+            width: fit-content;
+            border-bottom: 3px solid #000000;
+        }
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            & a {
+                color: #777777;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .f-sec3 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        & > span {
+            color: #000000;
+            font-size: 18px;
+            font-weight: bold;
+            width: fit-content;
+            border-bottom: 3px solid #000000;
+        }
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+</style>

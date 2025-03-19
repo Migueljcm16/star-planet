@@ -1,0 +1,31 @@
+---
+import logo from '../../public/logo.png';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href={logo.src} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>Star Planet | Maquinas de calidad</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		background-color: #EFEFEF;
+		font-family: "Onest", sans-serif;
+		font-size: 14px;
+		color: #777777;
+	}
+</style>
