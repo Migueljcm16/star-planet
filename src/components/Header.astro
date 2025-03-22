@@ -4,7 +4,7 @@ import fondo from '../assets/fondo/fondo.jpg';
 import maquina from '../assets/fondo/maquina.png';
 ---
 
-<header>
+<header id="st-inicio">
     <img src={fondo.src} alt="">
     <nav>
         <div>
@@ -15,15 +15,23 @@ import maquina from '../assets/fondo/maquina.png';
                     <span>A FUN WORLD</span>
                 </div>
             </div>
+            <button class="responsive-boton" id="nav-boton" data-astro-cid-3ef6ksr2="">☰</button>
             <div class="n-links">
-                <a href="#">INICIO</a>
-                <a href="#">NOSOTROS</a>
-                <a href="#">OFRECEMOS</a>
-                <a href="#">MISION</a>
-                <a href="#">CONTACTO</a>
+                <a href="#st-inicio" class="nav-link">INICIO</a>
+                <a href="#st-nosotros" class="nav-link">NOSOTROS</a>
+                <a href="#st-ofrecemos" class="nav-link">OFRECEMOS</a>
+                <a href="#st-mision" class="nav-link">MISION</a>
+                <a href="#st-contacto" class="nav-link">CONTACTO</a>
             </div>
         </div>
     </nav>
+    <div class="n-links" id="nav-links">
+        <a href="#st-inicio" class="nav-linkMb">INICIO</a>
+        <a href="#st-nosotros" class="nav-linkMb">NOSOTROS</a>
+        <a href="#st-ofrecemos" class="nav-linkMb">OFRECEMOS</a>
+        <a href="#st-mision" class="nav-linkMb">MISION</a>
+        <a href="#st-contacto" class="nav-linkMb">CONTACTO</a>
+    </div>
     <div class="h-contenido">
         <img src={maquina.src} alt="">
         <div>
@@ -111,6 +119,17 @@ import maquina from '../assets/fondo/maquina.png';
         }
     }
 
+    .responsive-boton {
+        display: none;
+        background: none;
+        padding: 0;
+        height: 100%;
+        border: none;
+        color: #000000;
+        font-size: 40px;
+        line-height: 45px;
+    }
+
     .n-links {
         display: flex;
         align-items: center;
@@ -128,6 +147,11 @@ import maquina from '../assets/fondo/maquina.png';
                 border-radius: 50px;
             }
         }
+    }
+    
+    .activo {
+        transform: translateY(0%) !important;
+        top: 80px;
     }
 
     .h-contenido {
@@ -179,9 +203,23 @@ import maquina from '../assets/fondo/maquina.png';
     }
 
     @media only screen and (max-width: 900px) {
+        .responsive-boton {
+            display: block;
+        }
 
         .n-links {
-            display: none;
+            background: #efefef;
+            padding: 50px 0px;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            min-height: calc(100vh - 80px);
+            transform: translateY(-100%);
+            transition: 0.5s ease-in-out;
+            left: 0;
+            z-index: 98;
         }
 
         .h-contenido {

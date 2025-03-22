@@ -1,43 +1,51 @@
 ---
 import fondo3 from '../assets/mision/fondo3.webp';
+import fondo4 from '../assets/mision/fondo4.jpg';
 ---
 
-<section class="m">
+<section class="m" id="st-mision">
     <div>
-        <div class="m-desc">
-            <span>
-                NUESTRA <strong>MISION</strong>
-            </span>
-            <span>
-                Somos una empresa peruana comprometida con la innovación en el diseño, producción y 
-                comercialización de máquinas de juego propias, destacándonos por su originalidad, 
-                versatilidad y calidad excepcional.
-            </span>
-            <span>
-                Ofrecemos soluciones diseñadas para optimizar la rentabilidad de su negocio, con una 
-                producción integral que involucra mano de obra altamente calificada y el uso de materia 
-                prima de primera calidad, tanto nacional como importada.
-            </span>
+        <div class="m-card">
+            <div class="m-card-desc">
+                <span>
+                    NUESTRA <strong>MISION</strong>
+                </span>
+                <span>
+                    Somos una empresa peruana comprometida con la innovación en el diseño, producción y 
+                    comercialización de máquinas de juego propias, destacándonos por su originalidad, 
+                    versatilidad y calidad excepcional.
+                </span>
+                <span>
+                    Ofrecemos soluciones diseñadas para optimizar la rentabilidad de su negocio, con una 
+                    producción integral que involucra mano de obra altamente calificada y el uso de materia 
+                    prima de primera calidad, tanto nacional como importada.
+                </span>
+            </div>
+            <img src={fondo4.src} alt="mision fondo" class="m-img">
         </div>
-        <img src={fondo3.src} alt="mision fondo" class="m-img">
     </div>
 </section>
 
 <style>
     .m {
-        background-color: #fff;
+        padding-top: 130px;
 
         & > div {
-            display: flex;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0px 30px;
-            box-sizing: border-box;
-            gap: 50px;
+            background: #ffffff;
         }
     }
 
-    .m-desc {
+    .m-card {
+        display: flex;
+        max-width: 1200px;
+        max-height: 430px;
+        margin: auto;
+        padding: 0px 30px;
+        box-sizing: border-box;
+        gap: 50px;
+    }
+
+    .m-card-desc {
         display: flex;
         flex-direction: column;
         max-width: 500px;
@@ -57,12 +65,13 @@ import fondo3 from '../assets/mision/fondo3.webp';
     }
 
     .m-img {
-        min-width: 0px;
+        min-width: 200px;
         object-fit: cover;
+        flex: 1;
     }
 
     @media only screen and (max-width: 768px) {
-        .m-desc {
+        .m-card-desc {
             & span {
                 font-size: 14px;
             }
@@ -74,24 +83,28 @@ import fondo3 from '../assets/mision/fondo3.webp';
     }
 
     @media only screen and (max-width: 680px) {
-        .m {
-            & > div {
-                display: flex;
-                flex-direction: column;
-                padding: 0px;
-                gap: 0;
-            }
+        .m-card {
+            display: flex;
+            flex-direction: column;
+            max-height: none;
+            padding: 0px;
+            gap: 0;
         }
 
-        .m-desc {
+        .m-card-desc {
             max-width: none;
             padding: 60px 30px;
             gap: 30px;
         }
+
+        .m-img {
+            height: 300px;
+            flex: none;
+        }
     }
 
     @media only screen and (max-width: 500px) {
-        .m-desc {
+        .m-card-desc {
             & span:nth-child(1) {
                 font-size: 28px;
             }

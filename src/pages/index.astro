@@ -40,7 +40,7 @@ import Footer from '../components/Footer.astro';
 		bottom: 20px;
 		right: 20px;
 		gap: 15px;
-		z-index: 99;
+		z-index: 97;
 	}
 
 	.wsp a {
@@ -72,3 +72,53 @@ import Footer from '../components/Footer.astro';
 		font-weight: 500;
 	}
 </style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("nav-boton");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle?.addEventListener("click", () => {
+            navLinks?.classList.toggle("activo");
+			document.body.classList.toggle("no-scroll");
+        });
+    });
+
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll(".nav-link").forEach(link => {
+			link.addEventListener("click", (e) => {
+				const targetId = link.getAttribute("href")?.substring(1);
+
+				if (targetId && targetId !== "#") {
+					e.preventDefault();
+
+					const targetElement = document.getElementById(targetId);
+					if (targetElement) {
+						targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+					}
+				}
+			});
+		});
+	});
+
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll(".nav-linkMb").forEach(link => {
+			link.addEventListener("click", (e) => {
+				const targetId = link.getAttribute("href")?.substring(1);
+				const menuToggle = document.getElementById("nav-boton");
+        		const navLinks = document.getElementById("nav-links");
+				
+				if (targetId && targetId !== "#") {
+					e.preventDefault();
+
+					const targetElement = document.getElementById(targetId);
+					if (targetElement) {
+						targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+						navLinks?.classList.toggle("activo");
+						document.body.classList.toggle("no-scroll");
+					}
+				}
+			});
+		});
+	});
+</script>
