@@ -1,5 +1,6 @@
 ---
 import logo from '../../public/logo.png';
+import './src/styles/global.css';
 ---
 
 <!doctype html>
@@ -8,9 +9,13 @@ import logo from '../../public/logo.png';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={logo.src} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="preload" href="/fonts/Onest-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" href="/fonts/Onest-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" href="/fonts/Onest-SemiBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" href="/fonts/Onest-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" href="/fonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" href="/fonts/Poppins-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" href="/fonts/Poppins-SemiBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 		<meta name="generator" content={Astro.generator} />
 		<title>Star Planet | Maquinas de calidad</title>
 	</head>
@@ -18,22 +23,3 @@ import logo from '../../public/logo.png';
 		<slot />
 	</body>
 </html>
-
-<style>
-	html {
-		scroll-behavior: smooth;
-	}
-
-	html,
-	body {
-		margin: 0;
-		background-color: #EFEFEF;
-		font-family: "Onest", sans-serif;
-		font-size: 14px;
-		color: #777777;
-	}
-
-	.no-scroll {
-		overflow: hidden;
-	}
-</style>

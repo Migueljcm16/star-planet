@@ -1,5 +1,6 @@
 ---
-
+import correo from '../assets/iconos/email.svg';
+import telefono from '../assets/iconos/phone.svg';
 ---
 
 <section class="c" id="st-contacto">
@@ -7,6 +8,11 @@
         <div class="c-formulario">
             <span>
                 CONTACTANOS
+            </span>
+            <span>
+                Si tienes preguntas, necesitas asesoría o quieres más información sobre nuestros productos 
+                o servicios, no dudes en comunicarte con nosotros. Nuestro equipo está comprometido a 
+                brindarte una respuesta rápida, de calidad y adecuada para resolver todas tus dudas.
             </span>
             <form action="">
                 <div>
@@ -20,155 +26,170 @@
         </div>
         <div class="c-datos">
             <span class="c-datos-titulo">
-                NUESTRO CORREO
+                INFORMACION DE CONTACTO
             </span>
             <span>
-                oficinacomercial@startplanet.com.pe
+                Puede contactarnos a traves de otros medios como nuestras plataformas o redes sociales.
             </span>
-            <br>
-            <span class="c-datos-titulo">
-                NUESTRO WHATSAPP
-            </span>
-            <span>
-                +51 993977804
-            </span>
+            <div class="c-datos-medios">
+                <img src={correo.src} alt="Ícono de correo" width="25" height="25" />
+                <span>
+                    oficinacomercial@startplanet.com.pe
+                </span>
+            </div>
+            <div class="c-datos-medios">
+                <img src={telefono.src} alt="Ícono de telefono" width="25" height="25" />
+                <span>
+                    +51 993977804
+                </span>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
     .c {
+        background-color: #f1f1f1;
+    }
 
-        & > div {
-            display: flex;
-            max-width: 1200px;
-            margin: auto;
-            padding: 130px 30px;
-            box-sizing: border-box;
-            gap: 50px;
-        }
+    .c > div {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        padding: 130px 30px;
+        gap: 50px;
     }
 
     .c-formulario {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        flex: 1;
+    }
 
-        & > span {
-            color: #235066;
-            font-size: 32px;
-            font-weight: bold;
-            line-height: 26px;
-        }
+    .c-formulario > span:nth-child(1) {
+        color: #01345e;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
 
-        & form {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
+    .c-formulario > span:nth-child(2) {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
 
-            & div {
-                display: flex;
-                gap: 35px;
-            }
+    .c-formulario form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
-            & input[type="text"], input[type="email"], textarea {
-                font-size: 15px;
-                font-family: "Onest", sans-serif;
-                min-width: 230px;
-                border: none;
-                background-color: #e2e2e2;
-                padding: 15px 20px;
-                outline: none;
-                resize: none;
-            }
+    .c-formulario form div {
+        display: flex;
+        gap: 30px;
+    }
 
-            & button {
-                color: #fff;
-                width: fit-content;
-                border: none;
-                background-color: #338eaf;
-                font-family: "Onest", sans-serif;
-                font-weight: 500;
-                padding: 14px 26px;
-                cursor: pointer;
-                outline: none;
-            }
-        }
+    .c-formulario form input[type="text"], input[type="email"], textarea {
+        font-size: 15px;
+        font-family: "Onest", sans-serif;
+        border: none;
+        border-radius: 6px;
+        background-color: #e2e2e2;
+        padding: 17px 20px;
+        outline: none;
+        resize: none;
+    }
+
+    .c-formulario form input[type="text"] {
+        width: 100%;
+    }
+
+    .c-formulario form button {
+        color: #fff;
+        border: none;
+        background-color: #016d9f;
+        border-radius: 6px;
+        font-family: "Onest", sans-serif;
+        font-weight: 500;
+        padding: 18px 28px;
+        cursor: pointer;
+        outline: none;
     }
 
     .c-datos {
         display: flex;
         flex-direction: column;
-        padding-top: 62px;
+        border-radius: 8px;
+        height: 100%;
+        max-width: 340px;
         gap: 8px;
-
-        & span {
-            font-size: 15px;
-        }
     }
 
-    .c-datos-titulo {
-        font-size: 16px !important;
+    .c-datos > span:nth-child(1) {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000000;
     }
 
-   
-
-    @media only screen and (max-width: 950px) {
-        .c {
-            & > div {
-                flex-direction: column;
-                gap: 80px;
-            }
-        }
-
-        .c-formulario {
-            & form {
-
-                & input[type="text"], input[type="email"], textarea {
-                    min-width: 0;
-                    flex: 1;
-                }
-            }
-        }
-
-        .c-datos {
-            padding-top: 40px;
-        }
+    .c-datos > span:nth-child(2) {
+        font-size: 15px;
+        line-height: 1.5;
     }
 
-    @media only screen and (max-width: 768px) {
-        .c-formulario {
-            & > span {
-                font-size: 30px;
-            }
+    .c-datos-medios {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
 
-            & form {
-                & button {
-                    font-size: 13px;
-                }
-            }
-        }
-
-        .c-datos {
-            & span {
-                font-size: 14px;
-            }
-        }
-
-        .c-datos-titulo {
-            font-size: 15px !important;
+    @media only screen and (max-width: 900px) {
+        .c > div {
+            flex-direction: column;
+            gap: 130px;
         }
     }
 
     @media only screen and (max-width: 500px) {
-        .c-formulario {
-            & > span {
-                font-size: 28px;
-            }
+        .c-formulario > span:nth-child(1) {
+            font-size: 34px;
+            line-height: 26px;
         }
 
-        .c-datos-titulo {
-            font-size: 14px !important;
+        .c-formulario > span:nth-child(2) {
+            font-size: 14px;
+        }
+
+        .c-formulario form {
+            gap: 20px;
+        }
+
+        .c-formulario form div {
+            gap: 20px;
+        }
+
+        .c-formulario form input[type="text"], input[type="email"], textarea {
+            font-size: 14px;
+        }
+
+        .c-formulario form button {
+            font-size: 13px;
+        }
+
+        .c-datos > span:nth-child(1) {
+            font-size: 15px;
+        }
+
+        .c-datos > span:nth-child(2) {
+            font-size: 14px;
+        }
+
+        .c-datos-medios span {
+            font-size: 13px;
+            word-break: break-all;
         }
     }
 </style>

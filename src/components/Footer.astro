@@ -12,28 +12,30 @@
             <div>
                 Empresa peruana dedicada a la innovación en máquinas de
                 juego, combinando diseño exclusivo, calidad superior y alta
-                rentabilidad con una producción integral.
+                rentabilidad.
             </div>
         </div>
         <div class="f-sec2">
-            <span>LINKS</span>
             <div>
-                <a href="#st-inicio" class="nav-link">INICIO</a>
-                <a href="#st-nosotros" class="nav-link">NOSOTROS</a>
-                <a href="#st-ofrecemos" class="nav-link">OFRECEMOS</a>
-                <a href="#st-mision" class="nav-link">MISION</a>
-                <a href="#st-contacto" class="nav-link">CONTACTO</a>
+                <span>LINKS</span>
+                <div>
+                    <a href="#st-inicio" class="nav-link">Inicio</a>
+                    <a href="#st-nosotros" class="nav-link">Nosotros</a>
+                    <a href="#st-productos" class="nav-link">Productos</a>
+                    <a href="#st-mision" class="nav-link">Mision</a>
+                    <a href="#st-contacto" class="nav-link">Contacto</a>
+                </div>
             </div>
-        </div>
-        <div class="f-sec3">
-            <span>CONTACTO</span>
             <div>
-                <span>
-                    oficinacomercial@startplanet.com.pe
-                </span>
-                <span>
-                    +51 993977804
-                </span>
+                <span>CONTACTO</span>
+                <div>
+                    <span>
+                        oficinacomercial@startplanet.com.pe
+                    </span>
+                    <span>
+                        +51 993977804
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -46,26 +48,23 @@
 
 <style>
     footer {
+        background-color: #000000;
+    }
+
+    footer > div:nth-child(1) {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
         max-width: 1200px;
         margin: auto;
-        padding: 0px 30px;
-        box-sizing: border-box;
+        padding: 60px 30px;
+        gap: 80px;
+    }
 
-        & > div:nth-child(1) {
-            display: flex;
-            justify-content: space-between;
-            background-color: #e2e2e2;
-            border-radius: 20px;
-            padding: 40px;
-            gap: 40px;
-        }
-
-        & > div:nth-child(2) {
-            text-align: center;
-            padding: 25px 0px;
-        }
+    footer > div:nth-child(2) {
+        text-align: center;
+        padding: 30px;
+        color: #838383;
     }
 
     .f-sec1 {
@@ -73,189 +72,148 @@
         flex-direction: column;
         max-width: 400px;
         gap: 20px;
+    }
 
-        & > div:nth-child(1) {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            width: fit-content;
+    .f-sec1 > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: fit-content;
+    }
 
-            & span {
-                color: #000000;
+    .f-sec1 > div:nth-child(1) span {
+        color: #ffffff;
+    }
 
-                &:nth-child(1) {
-                    font-size: 28px;
-                    font-weight: bold;
-                    letter-spacing: 1px;
-                    line-height: 24px;
-                }
+    .f-sec1 > div:nth-child(1) span:nth-child(1) {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
 
-                &:nth-child(2) {
-                    font-size: 12px;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                }
-            }
-        }
+    .f-sec1 > div:nth-child(1) span:nth-child(2) {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
 
-        & > div:nth-child(2) {
-            line-height: 24px;
-        }
+    .f-sec1 > div:nth-child(2) {
+        line-height: 1.5;
+        font-size: 15px;
+        color: #838383;
     }
 
     .f-sec2 {
         display: flex;
-        flex-direction: column;
-        gap: 40px;
-
-        & > span {
-            color: #000000;
-            font-size: 18px;
-            font-weight: bold;
-            width: fit-content;
-            border-bottom: 3px solid #000000;
-        }
-
-        & > div {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-
-            & a {
-                color: #777777;
-                text-decoration: none;
-            }
-        }
+        gap: 80px;
     }
 
-    .f-sec3 {
+    .f-sec2 > div {
         display: flex;
         flex-direction: column;
-        gap: 40px;
-
-        & > span {
-            color: #000000;
-            font-size: 18px;
-            font-weight: bold;
-            width: fit-content;
-            border-bottom: 3px solid #000000;
-        }
-
-        & > div {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+        margin-top: 19px;
+        gap: 22px;
     }
 
-    @media only screen and (max-width: 768px) {
-        footer {
+    .f-sec2 > div > span {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        width: fit-content;
+    }
 
-            & > div:nth-child(1) {
-                flex-direction: column;
-                align-items: center;
-            }
+    .f-sec2 > div > div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-            & > div:nth-child(2) {
-                font-size: 12px;
-            }
+    .f-sec2 > div > div a {
+        color: #838383;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    .f-sec2 > div > div span {
+        color: #838383;
+        font-size: 15px;
+    }
+
+    .f-sec2 > div > div span:nth-child(2) {
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width: 952px) {
+        footer > div:nth-child(1) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
         }
 
         .f-sec1 {
             align-items: center;
-
-            & > div:nth-child(1) {
-                align-items: center;
-
-                & span {
-
-                    &:nth-child(1) {
-                        font-size: 26px;
-                    }
-
-                    &:nth-child(2) {
-                        font-size: 10px;
-                    }
-                }
-            }
-
-            & > div:nth-child(2) {
-                text-align: center;
-            }
         }
 
-        .f-sec2 {
+        .f-sec1 > div:nth-child(1) {
             align-items: center;
-            gap: 30px;
-
-            & > span {
-                font-size: 16px;
-            }
-
-            & > div {
-                align-items: center;
-            }
         }
 
-        .f-sec3 {
-            align-items: center;
-            gap: 30px;
-
-            & > span {
-                font-size: 16px;
-            }
-
-            & > div {
-                align-items: center;
-            }
+        .f-sec1 > div:nth-child(2) {
+            text-align: center;
         }
     }
 
     @media only screen and (max-width: 500px) {
-        footer {
-            & > div:nth-child(2) {
-                font-size: 10px;
-            }
+        footer > div:nth-child(1) {
+            gap: 60px;
         }
 
-        .f-sec1 {
-            & > div:nth-child(1) {
+        footer > div:nth-child(2) {
+            font-size: 12px;
+        }
 
-                & span {
+        .f-sec1 > div:nth-child(1) span:nth-child(1) {
+            font-size: 24px;
+        }
 
-                    &:nth-child(1) {
-                        font-size: 24px;
-                    }
+        .f-sec1 > div:nth-child(1) span:nth-child(2) {
+            font-size: 8px;
+        }
 
-                    &:nth-child(2) {
-                        font-size: 8px;
-                    }
-                }
-            }
-
-            & > div:nth-child(2) {
-                font-size: 13px;
-            }
+        .f-sec1 > div:nth-child(2) {
+            font-size: 14px;
         }
 
         .f-sec2 {
-            & > span {
-                font-size: 14px;
-            }
-
-            & > div {
-                font-size: 13px;
-            }
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
         }
 
-        .f-sec3 {
-            & > span {
-                font-size: 14px;
-            }
+        .f-sec2 > div {
+            align-items: center;
+        }
 
-            & > div {
-                font-size: 13px;
-            }
+        .f-sec2 > div > span {
+            font-size: 15px;
+        }
+
+        .f-sec2 > div > div {
+            align-items: center;
+        }
+
+        .f-sec2 > div > div a {
+            font-size: 14px;
+        }
+
+        .f-sec2 > div > div span {
+            font-size: 14px;
+        }
+
+        .f-sec2 > div > div span:nth-child(2) {
+            font-size: 13px;
         }
     }
 </style>

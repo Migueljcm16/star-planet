@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nosotros from '../components/Nosotros.astro';
-import Ofrecemos from '../components/Ofrecemos.astro';
+import Productos from '../components/Productos.astro';
+import Frase from '../components/Frase.astro';
 import Mision from '../components/Mision.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
@@ -12,7 +13,8 @@ import Footer from '../components/Footer.astro';
 	<Header/>
 	<main>
 		<Nosotros/>
-		<Ofrecemos/>
+		<Productos/>
+		<Frase/>
 		<Mision/>
 		<Contacto/>
 	</main>
@@ -37,8 +39,8 @@ import Footer from '../components/Footer.astro';
 		align-items: flex-end;
     	flex-direction: column-reverse;
 		position: fixed;
-		bottom: 20px;
-		right: 20px;
+		bottom: 30px;
+		right: 30px;
 		gap: 15px;
 		z-index: 97;
 	}
@@ -64,6 +66,7 @@ import Footer from '../components/Footer.astro';
 		transform: translateY(15px);
 		opacity: 0;
 		transition: 0.4s ease-in-out;
+		user-select: none;
 	}
 
 	.wsp-mensaje span {

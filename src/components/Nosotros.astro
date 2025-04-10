@@ -10,11 +10,10 @@ import video from '../assets/nosotros/video-nosotros.mp4';
                 <source src={video} type="video/mp4">
                 Tu navegador no soporta el formato de video
             </video>
-            <div></div>
         </div>
         <div class="n-desc">
             <span>
-                ACERCA DE NOSOTROS
+                SOBRE NOSOTROS
             </span>
             <span>
                 Somos una empresa peruana comprometida con la innovación en el diseño, 
@@ -35,101 +34,93 @@ import video from '../assets/nosotros/video-nosotros.mp4';
 
 <style>
     .n {
+        background-color: #f1f1f1;
+    }
 
-        & > div {
-            display: flex;
-            max-width: 1200px;
-            margin: auto;
-            padding: 130px 30px 0px 30px;
-            box-sizing: border-box;
-            gap: 50px;
-        }
+    .n > div {
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        padding: 130px 30px;
+        gap: 100px;
     }
 
     .n-vid {
         position: relative;
+        min-width: 221px;
         flex: 1;
-        
-        & video {
-            position: absolute;
-            background: rgb(0, 0, 0);
-            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(1, 13, 22, 1) 13%, rgba(2, 21, 35, 1) 27%, rgba(7, 64, 106, 1) 100%);
-            width: 100%;
-            height: 100%;
-            z-index: 4;
-        }
-
-        & div {
-            position: absolute;
-            width: 95%;
-            height: 95%;
-            left: -30px;
-            bottom: -30px;
-            background: #adcad4;
-        }
+    }
+    
+    .n-vid video {
+        position: absolute;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(1, 13, 22, 1) 13%, rgba(2, 21, 35, 1) 27%, rgba(7, 64, 106, 1) 100%);
+        width: 100%;
+        height: 100%;
+        border-radius: 14px;
+        z-index: 4;
     }
 
     .n-desc {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 550px;
-        padding: 20px 0px;
+        max-width: 600px;
+        padding: 60px 0px;
         gap: 25px;
-
-        & span {
-            font-size: 15px;
-            line-height: 24px;
-        }
-
-        & span:nth-child(1) {
-            color: #235066;
-            font-size: 32px;
-            font-weight: bold;
-            line-height: 26px;
-        }
     }
 
-    @media only screen and (max-width: 900px) {
-        .n {
-            & > div {
-                flex-direction: column-reverse;
-            }
+    .n-desc span:nth-child(1) {
+        color: #01345e;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 28px;
+    }
+
+    .n-desc span {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    @media only screen and (max-width: 810px) {
+        .n > div {
+            flex-direction: column-reverse;
+            gap: 100px;
         }
 
         .n-vid {
+            min-width: auto;
+            height: 450px;
             flex: none;
-            height: 400px;
-
-            & div {
-                display: none;
-            }
         }
 
         .n-desc {
-            width: auto;
+            max-width: none;
             padding: 0px;
-            gap: 25px;
-        }
-    }
-
-    @media only screen and (max-width: 768px) {
-        .n-desc {
-            & span {
-                font-size: 14px;
-            }
-
-            & span:nth-child(1) {
-                font-size: 30px;
-            }
         }
     }
 
     @media only screen and (max-width: 500px) {
-        .n-desc {
-            & span:nth-child(1) {
-                font-size: 28px;
-            }
+        .n > div {
+            flex-direction: column-reverse;
+            gap: 50px;
+        }
+
+        .n-vid {
+            min-width: auto;
+            height: 450px;
+            flex: none;
+        }
+
+        .n-desc span:nth-child(1) {
+            font-size: 34px;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        .n-desc span {
+            font-size: 14px;
+            text-align: center;
         }
     }
 </style>

@@ -1,0 +1,94 @@
+---
+import producto1 from '../assets/productos/pro1.webp';
+import producto2 from '../assets/productos/pro2.webp';
+import producto3 from '../assets/productos/pro3.webp';
+import producto4 from '../assets/productos/pro4.webp';
+---
+
+<section class="p" id="st-productos">
+    <div>
+        <div class="p-titulo">
+            <span>NUESTROS PRODUCTOS</span>
+            <span>Algunos de los productos que puedes adquirir a un buen precio y de buena calidad</span>
+        </div>
+        <div class="p-info">
+            <div>
+                <img src={producto1.src} alt="Peluche">
+            </div>
+            <div>
+                <img src={producto2.src} alt="Peluche">
+            </div>
+            <div>
+                <img src={producto3.src} alt="Peluche">
+            </div>
+            <div>
+                <img src={producto4.src} alt="Peluche">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .p > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 130px 30px;
+        box-sizing: border-box;
+        gap: 50px;
+    }
+
+    .p-titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .p-titulo span:nth-child(1) {
+        color: #01345e;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .p-titulo span:nth-child(2) {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .p-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
+    }
+
+    .p-info > div{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        min-width: 180px;
+        flex: 1;
+    }
+
+    .p-info > div img{
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .p-titulo span:nth-child(1) {
+            font-size: 34px;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        .p-titulo span:nth-child(2) {
+            font-size: 14px;
+        }
+    }
+</style>

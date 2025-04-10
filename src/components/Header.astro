@@ -19,16 +19,16 @@ import maquina from '../assets/fondo/maquina.png';
             <div class="n-links">
                 <a href="#st-inicio" class="nav-link">INICIO</a>
                 <a href="#st-nosotros" class="nav-link">NOSOTROS</a>
-                <a href="#st-ofrecemos" class="nav-link">OFRECEMOS</a>
+                <a href="#st-productos" class="nav-link">PRODUCTOS</a>
                 <a href="#st-mision" class="nav-link">MISION</a>
                 <a href="#st-contacto" class="nav-link">CONTACTO</a>
             </div>
         </div>
     </nav>
-    <div class="n-links" id="nav-links">
+    <div class="n-links" id="nav-links" style="top: 80px;">
         <a href="#st-inicio" class="nav-linkMb">INICIO</a>
         <a href="#st-nosotros" class="nav-linkMb">NOSOTROS</a>
-        <a href="#st-ofrecemos" class="nav-linkMb">OFRECEMOS</a>
+        <a href="#st-productos" class="nav-linkMb">PRODUCTOS</a>
         <a href="#st-mision" class="nav-linkMb">MISION</a>
         <a href="#st-contacto" class="nav-linkMb">CONTACTO</a>
     </div>
@@ -37,13 +37,13 @@ import maquina from '../assets/fondo/maquina.png';
         <div>
             <span>
                 LA MEJOR CALIDAD EN
-                <br>
+            </span>
+            <span>
                 MAQUINAS PELUCHERAS
             </span>
             <span>
-                Somos líderes en la venta de máquinas pelucheras de alta calidad,
-                diseñadas para brindar entretenimiento y rentabilidad. Descubre
-                nuestras opciones y lleva la diversión a tu negocio.
+                Lideramos el mercado en la venta de máquinas pelucheras de alta calidad que ofrecen una 
+                experiencia de entretenimiento excepcional. Conoce nuestras opciones y potencia tu negocio.
             </span>
             <a href="#">SABER MAS</a>
         </div>
@@ -56,15 +56,17 @@ import maquina from '../assets/fondo/maquina.png';
         flex-direction: column;
         position: relative;
         min-height: 580px;
+        height: 100vh;
+        max-height: 800px;
         overflow: hidden;
+    }
 
-        & > img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(.3);
-            position: absolute;
-        }
+    header > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(.3);
+        position: absolute;
     }
     
     nav {
@@ -73,50 +75,49 @@ import maquina from '../assets/fondo/maquina.png';
         width: 100%;
         box-shadow: rgb(0 0 0 / 12%) 0px 2px 10px;
         z-index: 99;
+    }
 
-        & > div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            height: 80px;
-            margin: auto;
-            padding: 0px 30px;
-            box-sizing: border-box;
-        }
+    nav > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        height: 80px;
+        margin: auto;
+        padding: 0px 30px;
     }
 
     .n-logo {
         display: flex;
         align-items: center;
         gap: 12px;
+    }
 
-        & > img {
-            height: 48px;
-        }
+    .n-logo > img {
+        height: 48px;
+    }
 
-        & > div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+    .n-logo > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 
-            & span {
-                color: #000000;
+    .n-logo > div span {
+        color: #000000;
+    }
 
-                &:nth-child(1) {
-                    font-size: 28px;
-                    font-weight: bold;
-                    letter-spacing: 1px;
-                    line-height: 24px;
-                }
+    .n-logo > div span:nth-child(1) {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
 
-                &:nth-child(2) {
-                    font-size: 12px;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                }
-            }
-        }
+    .n-logo > div span:nth-child(2) {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
     }
 
     .responsive-boton {
@@ -126,7 +127,7 @@ import maquina from '../assets/fondo/maquina.png';
         height: 100%;
         border: none;
         color: #000000;
-        font-size: 40px;
+        font-size: 35px;
         line-height: 45px;
     }
 
@@ -134,24 +135,23 @@ import maquina from '../assets/fondo/maquina.png';
         display: flex;
         align-items: center;
         gap: 35px;
+    }
 
-        & > a {
-            color: #777777;
-            font-weight: 500;
-            text-decoration: none;
+    .n-links > a {
+        color: #777777;
+        font-weight: 500;
+        text-decoration: none;
+    }
 
-            &:nth-child(5) {
-                color: #fff;
-                background-color: #338eaf;
-                padding: 14px 25px;
-                border-radius: 50px;
-            }
-        }
+    .n-links > a:nth-child(5) {
+        color: #fff;
+        background-color: #016d9f;
+        padding: 14px 25px;
+        border-radius: 50px;
     }
     
     .activo {
         transform: translateY(0%) !important;
-        top: 80px;
     }
 
     .h-contenido {
@@ -161,48 +161,61 @@ import maquina from '../assets/fondo/maquina.png';
         width: 100%;
         max-width: 1200px;
         margin: auto;
-        padding: 0px 30px;
-        padding-top: 80px;
-        box-sizing: border-box;
+        padding: 80px 30px;
+        padding-top: 114px;
         flex: 1;
+    }
 
-        & > img {
-            position: absolute;
-            width: 470px;
-            bottom: -130px;
-            transform: translateX(675px);
-        }
+    .h-contenido > img {
+        position: absolute;
+        width: 470px;
+        top: 120px;
+        transform: translateX(740px);
+    }
 
-        & > div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 600px;
-            gap: 25px;
+    .h-contenido > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 550px;
+    }
 
-            & span:nth-child(1) {
-                color: #fff;
-                font-size: 46px;
-                font-weight: 900;
-            }
+    .h-contenido > div span:nth-child(1) {
+        color: #cbcbcb;
+        font-size: 16px;
+        font-weight: 600;
+    }
 
-            & span:nth-child(2) {
-                color: #BEBEBE;
-                font-size: 16px;
-                line-height: 24px;
-            }
+    .h-contenido > div span:nth-child(2) {
+        color: #fff;
+        font-size: 46px;
+        font-weight: 600;
+        line-height: 60px;
+        margin-bottom: 20px;
+        font-family: "Poppins", sans-serif;
+    }
 
-            & a {
-                color: #fff;
-                background-color: #338eaf;
-                font-weight: 500;
-                text-decoration: none;
-                padding: 14px 26px;
-            }
-        }
+    .h-contenido > div span:nth-child(3) {
+        color: #cbcbcb;
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 35px;
+    }
+
+    .h-contenido > div a {
+        color: #fff;
+        background-color: #016d9f;
+        border-radius: 6px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 14px 26px;
     }
 
     @media only screen and (max-width: 900px) {
+        .h-contenido {
+            padding-top: 160px;
+        }
+
         .responsive-boton {
             display: block;
         }
@@ -223,108 +236,80 @@ import maquina from '../assets/fondo/maquina.png';
         }
 
         .h-contenido {
+            width: auto;
+        }
 
-            & > img {
-                display: none;
-            }
+        .h-contenido > img {
+            display: none;
+        }
 
-            & > div {
-                display: flex;
-                align-items: center;
-                width: 100%;
-                gap: 30px;
+        .h-contenido > div {
+            width: 100%;
+            align-items: center;
+        }
 
-                & span:nth-child(1) {
-                    max-width: 600px;
-                    text-align: center;
-                }
+        .h-contenido > div span:nth-child(2) {
+            text-align: center;
+        }
 
-                & span:nth-child(2) {
-                    max-width: 600px;
-                    text-align: center;
-                }
-            }
+        .h-contenido > div span:nth-child(3) {
+            max-width: 700px;
+            text-align: center;
         }
     }
 
-    @media only screen and (max-width: 768px) {
-        .n-logo {
-            & > img {
-                height: 45px;
-            }
-
-            & > div {
-
-                & span {
-
-                    &:nth-child(1) {
-                        font-size: 26px;
-                    }
-
-                    &:nth-child(2) {
-                        font-size: 10px;
-                    }
-                }
-            }
+    @media only screen and (max-width: 620px) {
+        .h-contenido > div span:nth-child(1) {
+            font-size: 15px;
         }
 
-        .h-contenido {
-            & > div {
-
-                & span:nth-child(1) {
-                    font-size: 42px;
-                }
-
-                & span:nth-child(2) {
-                    font-size: 15px;
-                }
-
-                & a {
-                    font-size: 13px;
-                }
-            }
+        .h-contenido > div span:nth-child(2) {
+            font-size: 40px;
+            line-height: 50px;
         }
-    }
 
-    @media only screen and (max-width: 650px) {
-        .h-contenido {
-            & > div {
+        .h-contenido > div span:nth-child(3) {
+            font-size: 15px;
+            line-height: 1.5;
+        }
 
-                & span:nth-child(1) {
-                    font-size: 32px;
-                }
-            }
+        .h-contenido > div a {
+            font-size: 13px;
         }
     }
 
     @media only screen and (max-width: 500px) {
         .n-logo {
-            & > img {
-                height: 42px;
-            }
-
-            & > div {
-
-                & span {
-
-                    &:nth-child(1) {
-                        font-size: 24px;
-                    }
-
-                    &:nth-child(2) {
-                        font-size: 8px;
-                    }
-                }
-            }
+            gap: 10px;
+        }
+        
+        .n-logo > img {
+            height: 38px;
         }
 
-        .h-contenido {
-            & > div {
+        .n-logo > div span:nth-child(1) {
+            font-size: 24px;
+        }
 
-                & span:nth-child(1) {
-                    font-size: 26px;
-                }
-            }
+        .n-logo > div span:nth-child(2) {
+            font-size: 8px;
+        }
+
+        .h-contenido > div span:nth-child(1) {
+            font-size: 14px;
+        }
+
+        .h-contenido > div span:nth-child(2) {
+            font-size: 38px;
+            line-height: 45px;
+        }
+
+        .h-contenido > div span:nth-child(3) {
+            font-size: 14px;
+        }
+
+        .h-contenido > div a {
+            font-size: 12px;
         }
     }
 </style>

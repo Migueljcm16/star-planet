@@ -1,113 +1,140 @@
 ---
-import fondo3 from '../assets/mision/fondo3.webp';
-import fondo4 from '../assets/mision/fondo4.jpg';
+import users from '../assets/iconos/users.png';
+import security from '../assets/iconos/security.png';
+import handshake from '../assets/iconos/handshake.svg';
 ---
 
 <section class="m" id="st-mision">
-    <div>
-        <div class="m-card">
-            <div class="m-card-desc">
-                <span>
-                    NUESTRA <strong>MISION</strong>
-                </span>
-                <span>
-                    Somos una empresa peruana comprometida con la innovación en el diseño, producción y 
-                    comercialización de máquinas de juego propias, destacándonos por su originalidad, 
-                    versatilidad y calidad excepcional.
-                </span>
-                <span>
-                    Ofrecemos soluciones diseñadas para optimizar la rentabilidad de su negocio, con una 
-                    producción integral que involucra mano de obra altamente calificada y el uso de materia 
-                    prima de primera calidad, tanto nacional como importada.
-                </span>
-            </div>
-            <img src={fondo4.src} alt="mision fondo" class="m-img">
+    <div class="m-card">
+        <span>
+            NUESTRA MISION
+        </span>
+        <span>
+            Transformar la industria del entretenimiento mediante el diseño, el desarrollo y comercialización 
+            de máquinas de juego innovadoras, originales y de alta calidad. Nos comprometemos a ofrecer varias
+            soluciones que impulsen la rentabilidad de nuestros clientes usando creatividad, tecnología 
+            y producción especializada.
+        </span>
+        <span>
+            Trabajamos con mano de obra altamente calificada y materiales de primera categoría, tanto 
+            nacionales como importados para asi poder garantizar productos duraderos, atractivos y confiables 
+            que generen experiencias únicas para los usuarios.
+        </span>
+        <br>
+        <div class="m-card-desc">
+            <img src={users.src} alt="Icono usuarios" width="22" height="22">
+            <span>
+                Enfocados en brindar soluciones que realmente aporten valor a nuestros clientes. Nuestro 
+                objetivo es optimizar la rentabilidad de sus negocios en cada etapa del proceso.
+            </span>
+        </div>
+        <div class="m-card-desc sp">
+            <img src={security.src} alt="Icono seguridad" width="22" height="22">
+            <span>
+                Productos fabricados con materiales de primera calidad y ensamblados por profesionales 
+                altamente calificados, implementando todos los estándares de seguridad.
+            </span>
+        </div>
+        <div class="m-card-desc">
+            <img src={handshake.src} alt="Icono negocio" width="22" height="22">
+            <span>
+                Brindamos un servicio integral, asegurando que cada máquina funcione de manera óptima
+                proporcionando atención personalizada a nuestros clientes.
+            </span>
         </div>
     </div>
+    <div class="m-img"></div>
 </section>
 
 <style>
     .m {
-        padding-top: 130px;
-
-        & > div {
-            background: #ffffff;
-        }
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        padding: 130px 30px;
+        gap: 100px;
     }
 
     .m-card {
         display: flex;
-        max-width: 1200px;
-        max-height: 430px;
-        margin: auto;
-        padding: 0px 30px;
-        box-sizing: border-box;
-        gap: 50px;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 486px;
+        padding: 80px 0;
+        gap: 25px;
+    }
+
+    .m-card > span {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .m-card > span:nth-child(1) {
+        color: #01345e;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 28px;
     }
 
     .m-card-desc {
         display: flex;
-        flex-direction: column;
-        max-width: 500px;
-        padding: 60px 0px;
-        gap: 30px;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .m-card-desc img {
+        background-color: #016d9f;
+        border-radius: 50%;
+        padding: 10px;
+    }
 
-        & span {
-            font-size: 15px;
-            line-height: 24px;
-        }
-
-        & span:nth-child(1) {
-            color: #235066;
-            font-size: 32px;
-            line-height: 26px;
-        }
+    .sp {
+        margin: 15px 0;
     }
 
     .m-img {
-        min-width: 200px;
-        object-fit: cover;
+        min-width: 300px;
+        background-image: url(/assets/fondoMision.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 14px;
         flex: 1;
     }
 
-    @media only screen and (max-width: 768px) {
-        .m-card-desc {
-            & span {
-                font-size: 14px;
-            }
-
-            & span:nth-child(1) {
-                font-size: 30px;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 680px) {
-        .m-card {
-            display: flex;
+    @media only screen and (max-width: 800px) {
+        .m {
             flex-direction: column;
-            max-height: none;
-            padding: 0px;
-            gap: 0;
         }
 
-        .m-card-desc {
+        .m-card {
             max-width: none;
-            padding: 60px 30px;
-            gap: 30px;
+            padding: 0;
         }
 
         .m-img {
-            height: 300px;
+            min-width: auto;
+            height: 500px;
             flex: none;
         }
     }
 
     @media only screen and (max-width: 500px) {
-        .m-card-desc {
-            & span:nth-child(1) {
-                font-size: 28px;
-            }
+        .m {
+            gap: 80px;
+        }
+
+        .m-card > span {
+            font-size: 14px;
+        }
+
+        .m-card > span:nth-child(1) {
+            font-size: 34px;
+            line-height: 36px;
+        }
+        
+        .m-card-desc span {
+            font-size: 13px;
         }
     }
 </style>
